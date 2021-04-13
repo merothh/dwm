@@ -13,15 +13,13 @@ static const char *fonts[]          = {
                                         "MaterialIcons:size=8",
                                       };
 static const char dmenufont[]       = "Meslo LG S:size=9";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_black[]       = "#000000";
+static const char col_white[]       = "#ffffff";
 static const char col_accent[]      = "#0a2066";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_accent,  col_accent  },
+	[SchemeNorm] = { col_white, col_black, col_black },
+	[SchemeSel]  = { col_white, col_accent, col_accent  },
 };
 
 /* tagging */
@@ -84,7 +82,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_accent, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_accent, "-sf", col_white, NULL };
 static const char *scrshotcmd[] = { "scrshot", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
