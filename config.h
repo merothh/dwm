@@ -19,10 +19,17 @@ static const char dmenufont[]       = "Meslo LG S:size=9";
 static const char col_black[]       = "#000000";
 static const char col_white[]       = "#ffffff";
 static const char col_accent[]      = "#0a2066";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_white, col_black, col_black },
 	[SchemeSel]  = { col_white, col_accent, col_accent  },
+};
+static const unsigned int alphas[][3]      = {
+       /*               fg      bg        border     */
+       [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+       [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
